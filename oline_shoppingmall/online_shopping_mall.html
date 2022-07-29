@@ -1,0 +1,158 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>온라인 쇼핑몰</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Logo -->
+    <img class="logo" src="./imgs/logo.png" alt="쇼핑몰 로고" width="100" height="100" >
+    
+    <section class="buttons">
+        <button class="btn pants"><img class="imgbtn" src="./imgs/blue_p.png" alt="파란색 바지"></button>
+        <button class="btn skirt"><img class="imgbtn" src="./imgs/blue_s.png" alt="파란색 치마"></button>
+        <button class="btn tshirt"><img class="imgbtn" src="./imgs/blue_t.png" alt="파란색 티셔츠"></button>
+        
+        <button class="btn colorBtn blue">Blue</button>
+        <button class="btn colorBtn Pink">Pink</button>
+        <button class="btn colorBtn Yellow">Yellow</button>
+    </section>
+
+    <ul class="items">
+        <li class="item li_blue li_pants">
+            <img class="itemList" src="./imgs/blue_p.png" alt="파란색 바지">
+            <span class="itemNm">man, large size</span>
+        </li>
+        <li class="item li_pink li_pants">
+            <img class="itemList" src="./imgs/pink_p.png" alt="분홍색 바지">
+            <span class="itemNm">man, small size</span>
+        </li>
+        <li class="item li_yellow li_tshirt">
+            <img class="itemList" src="./imgs/yellow_t.png" alt="노란색 티셔츠">
+            <span class="itemNm">man, large size</span>
+        </li>
+        <li class="item li_pink li_pants">
+            <img class="itemList" src="./imgs/pink_p.png" alt="분홍색 바지">
+            <span class="itemNm">female, large size</span>
+        </li>
+        <li class="item li_blue li_skirt">
+            <img class="itemList " src="./imgs/blue_s.png" alt="파란색 치마">
+            <span class="itemNm">female, large size</span>
+        </li>
+        <li class="item li_blue li_tshirt">
+            <img class="itemList" src="./imgs/blue_t.png" alt="파란색 티셔츠">
+            <span class="itemNm">man, large size</span>
+        </li>
+        <li class="item li_pink li_tshirt">
+            <img class="itemList" src="./imgs/pink_t.png" alt="분홍색 티셔츠">
+            <span class="itemNm">female, large size</span>
+        </li>
+        <li class="item li_pink li_skirt">
+            <img class="itemList" src="./imgs/pink_s.png" alt="분홍색 치마">
+            <span class="itemNm">female, small size</span>
+        </li>
+        <li class="item li_yellow li_pants">
+            <img class="itemList" src="./imgs/yellow_p.png" alt="노란색 바지">
+            <span class="itemNm">man, small size</span>
+        </li>
+        <li class="item li_blue li_tshirt">
+            <img class="itemList" src="./imgs/blue_t.png" alt="파란색 티셔츠">
+            <span class="itemNm">female, large size</span>
+        </li>
+        <li class="item li_yellow li_tshirt">
+            <img class="itemList" src="./imgs/yellow_t.png" alt="노란색 티셔츠">
+            <span class="itemNm">female, small size</span>
+        </li>
+        <li class="item li_blue li_tshirt">
+            <img class="itemList" src="./imgs/blue_t.png" alt="파란색 티셔츠">
+            <span class="itemNm">man, small size</span>
+        </li>
+        <li class="item li_pink li_pants">
+            <img class="itemList" src="./imgs/pink_p.png" alt="분홍색 바지">
+            <span class="itemNm">female, small size</span>
+        </li>
+        <li class="item li_yellow li_skirt">
+            <img class="itemList" src="./imgs/yellow_s.png" alt="노란색 치마">
+            <span class="itemNm">female, large size</span>
+        </li>
+    </ul>
+    
+    <script>
+        // 버튼 클릭
+        const $ListAll = document.querySelector('.items');
+        const item = document.querySelectorAll('.item');
+        
+        const $pants = document.querySelector('.pants');
+        const $skirt = document.querySelector('.skirt');
+        const $tshirt = document.querySelector('.tshirt');
+        
+        const $Blue = document.querySelector('.blue');
+        const $Pink = document.querySelector('.Pink');
+        const $Yellow = document.querySelector('.Yellow');
+        
+        // 조건 선택자
+        const showYellow = document.querySelectorAll('.li_yellow');
+        const showPink = document.querySelectorAll('.li_pink');
+        const showBlue = document.querySelectorAll('.li_blue');
+
+        const showPants = document.querySelectorAll('.li_pants');
+        const showSkirt = document.querySelectorAll('.li_skirt');
+        const showTshirt = document.querySelectorAll('.li_tshirt');
+
+        $Blue.addEventListener('click', () => {
+            for(var i = 0; i < item.length; i++){
+                item[i].style.display = 'none';
+            }
+            for(var i = 0; i < showBlue.length; i++){
+                showBlue[i].style.display = 'block';
+            }
+        });
+        
+        $Pink.addEventListener('click', () => {
+            for(var i = 0; i < item.length; i++){
+                item[i].style.display = 'none';
+            }
+            for(var i = 0; i < showPink.length; i++){
+                showPink[i].style.display = 'block';
+            }
+        });
+        $Yellow.addEventListener('click', () => {
+            for(var i = 0; i < item.length; i++){
+                item[i].style.display = 'none';
+            }
+            for(var i = 0; i < showYellow.length; i++){
+                showYellow[i].style.display = 'block';
+            }
+        });
+
+
+        $pants.addEventListener('click', () => {
+            for(var i = 0; i < item.length; i++){
+                item[i].style.display = 'none';
+            }
+            for(var i = 0; i < showPants.length; i++){
+                showPants[i].style.display = 'block';
+            }
+        });
+        $skirt.addEventListener('click', () => {
+            for(var i = 0; i < item.length; i++){
+                item[i].style.display = 'none';
+            }
+            for(var i = 0; i < showSkirt.length; i++){
+                showSkirt[i].style.display = 'block';
+            }
+        });
+        $tshirt.addEventListener('click', () => {
+            for(var i = 0; i < item.length; i++){
+                item[i].style.display = 'none';
+            }
+            for(var i = 0; i < showTshirt.length; i++){
+                showTshirt[i].style.display = 'block';
+            }
+        });
+        
+        </script>
+</body>
+</html>
